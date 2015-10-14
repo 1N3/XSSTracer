@@ -2,7 +2,7 @@
 # Cross-Site Tracer v1.3 by 1N3
 # https://crowdshield.com
 #
-# ABOUT: A quick and easy script to check remote web servers for Cross-Site Tracing, Cross-Frame Scripting/Clickjacking and Host Header Injection vulnerabilities. For more robust mass scanning, you can create a list of domains or IP addresses to iterate through by doing 'for a in `cat targets.txt`; do ./xsstracer.py $a 80; done;'
+# ABOUT: A python script to check remote web servers for Cross-Site Tracing, Cross-Frame Scripting/Clickjacking and Host Header Injection vulnerabilities. For more robust mass scanning, you can create a list of domains or IP addresses to iterate through by doing 'for a in `cat targets.txt`; do ./xsstracer.py $a 80; done;'
 #
 # USAGE: xsstracer.py <IP/host> <port>
 #
@@ -106,7 +106,7 @@ def main(argv):
 			s3.close()
 
 			if frame_inject.lower() in data3.lower():
-				print bcolors.FAIL + "+ -- --=[Site is vulnerable to host header injection!" + bcolors.ENDC
+				print bcolors.FAIL + "+ -- --=[Site vulnerable to host header injection!" + bcolors.ENDC
 
 			else:
 				print bcolors.OKGREEN + "+ -- --=[Site not vulnerable to host header injection!" + bcolors.ENDC
