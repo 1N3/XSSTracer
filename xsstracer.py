@@ -106,10 +106,10 @@ def main(argv):
 			s3.close()
 
 			if frame_inject.lower() in data3.lower():
-				print bcolors.FAIL + "+ -- --=[Site vulnerable to host header injection!" + bcolors.ENDC
+				print bcolors.FAIL + "+ -- --=[Site vulnerable to Host Header Injection!" + bcolors.ENDC
 
 			else:
-				print bcolors.OKGREEN + "+ -- --=[Site not vulnerable to host header injection!" + bcolors.ENDC
+				print bcolors.OKGREEN + "+ -- --=[Site not vulnerable to Host Header Injection!" + bcolors.ENDC
 
 			# TEST FOR CLICKJACKING AND CFS
 			s2=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
